@@ -1,0 +1,113 @@
+/* Police personnalisé (fontsquirrel/awesomefont/googlefont) */
+
+/* Eléments principaux de la page */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../image/wallpaper.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bloc_page{
+    width: 900px;
+    margin: auto;
+}
+
+/* Barre de navigation */
+
+.barre_nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.barre_nav .titre_nav{
+    display: flex;
+    align-items: center
+}
+
+.barre_nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barre_nav .onglets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barre_nav .onglets a{
+    /* Comment espacer mes liens 
+    sans décentrer le logo ??? 
+    margin-right: 10px; */
+}
+
+/* Meilleur film */
+#meilleur_film h1{
+    text-align: center;
+    margin-left: 25px;
+}
+
+#meilleur_film h2{
+    position: absolute;
+    color: aliceblue;
+}
+
+/* Toutes les catégories */
+.categories h1{
+    text-align: center;
+}
+
+.fleche_gauche {
+    transform: rotate(180deg);
+}
+
+.categories .liste{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+/* Films les mieux notés + Anime */
+
+#mieux_notes, #anime {
+    display: flex;
+    justify-content: center;
+}
+
+#mieux_notes div, #anime div {
+    width: 600px;
+    height: 100px;
+
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    margin: 5px;
+    /* line-height doit avoir la même hauteur 
+    pour centrer verticalement le texte
+     */
+    line-height: 100px;
+}
+
+.mieux_notes, .anime{
+    display: flex;
+    border: solid 1px #000;
+    justify-content: space-between;
+}
+
+
+#mieux_notes img, #anime img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Catégorie Horreur */
+#horreur {
+    display: flex;
+}
