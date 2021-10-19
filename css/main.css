@@ -6,13 +6,16 @@
 }
 
 body{
+    /* background-color: dimgrey; */
     background-image: url("../image/wallpaper.png");
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #bloc_page{
-    width: 900px;
+    width: 68%;
     margin: auto;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 /* Barre de navigation */
@@ -25,6 +28,7 @@ body{
 }
 
 .barre_nav .titre_nav{
+    color: black;
     display: flex;
     align-items: center
 }
@@ -44,11 +48,20 @@ body{
 .barre_nav .onglets a{
     /* Comment espacer mes liens 
     sans décentrer le logo ??? 
-    margin-right: 10px; */
+    Rajouter top left right center 
+    séparement */
 }
 
 /* Meilleur film */
+
+.best_movie_container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
 #meilleur_film h1{
+    color: black;
     text-align: center;
     margin-left: 25px;
 }
@@ -56,58 +69,101 @@ body{
 #meilleur_film h2{
     position: absolute;
     color: aliceblue;
+    top: 40;
 }
+
+.best_movie_container img {
+    align-content: center;
+}
+
+.best_movie_container button, p {
+    position: absolute;
+}
+
 
 /* Toutes les catégories */
 .categories h1{
     text-align: center;
-}
-
-.fleche_gauche {
-    transform: rotate(180deg);
+    color: black;
 }
 
 .categories .liste{
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
+    /* Cache la barre de défilement */
+    overflow: hidden;
 }
 
-/* Films les mieux notés + Anime */
+/* Carrousel */
+.carrousel {
+    position: relative;
+    max-width: 1150px;
+    margin: 0 auto;
+}
 
-#mieux_notes, #anime {
+.carrousel_image {
+    width: auto;
+    height: autos;
+    object-fit: cover;
+}
+
+.carrousel_container {
+    height: auto;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+
+.carrousel_slide {
+    display: flex;
+    top: 0;
+    bottom: 0;
+}
+
+.carrousel_button{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 40px;
+    color: black;
+}
+
+.carrousel_button-left {
+    left: -50px;
+}
+
+.carrousel_button-right {
+    right: -50px;
+}
+
+
+/* Carrousel navigator
+
+.carrousel_nav {
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 
-#mieux_notes div, #anime div {
-    width: 600px;
-    height: 100px;
-
-    text-align: center;
-    vertical-align: middle;
-    align-items: center;
-    margin: 5px;
-    /* line-height doit avoir la même hauteur 
-    pour centrer verticalement le texte
-     */
-    line-height: 100px;
+.carrousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: black;
+    margin: 0 10px;
+    background: rgba(0, 0, 0, .3);
 }
 
-.mieux_notes, .anime{
-    display: flex;
-    border: solid 1px #000;
-    justify-content: space-between;
-}
-
-
-#mieux_notes img, #anime img {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Catégorie Horreur */
-#horreur {
-    display: flex;
-}
+.carrousel_indicator.current-slide {
+    background: rgba(0, 0, 0, 0.75);
+} */
