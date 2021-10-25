@@ -1,6 +1,6 @@
-/* Police personnalisé (fontsquirrel/awesomefont/googlefont) */
+/* Personalize fonts (fontsquirrel/awesomefont/googlefont) */
 
-/* Eléments principaux de la page */
+/* Main page elements */
 *{
     box-sizing: border-box;
 }
@@ -11,48 +11,48 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#bloc_page{
+#page_bloc{
     width: 68%;
     margin: auto;
     padding-top: 20px;
     padding-bottom: 60px;
 }
 
-/* Barre de navigation */
+/* Navigation bar */
 
-.barre_nav{
+.nav_bar{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 25px;
 }
 
-.barre_nav .titre_nav{
+.nav_bar .nav_title{
     color: black;
     display: flex;
     align-items: center
 }
 
-.barre_nav .logo{
+.nav_bar .logo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.barre_nav .onglets{
+.nav_bar .tabs{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.barre_nav .onglets a{
-    /* Comment espacer mes liens 
-    sans décentrer le logo ??? 
-    Rajouter top left right center 
-    séparement */
+.nav_bar .tabs a{
+    /* Separate links without moving
+    the logo
+    (set top left/middle/top-right
+    to corresponding elements) */
 }
 
-/* Meilleur film */
+/* Best movie */
 
 .best_movie_container {
     display: flex;
@@ -60,13 +60,13 @@ body{
     width: auto;
 }
 
-#meilleur_film h1{
+#best_movie h1{
     color: black;
     text-align: center;
     margin-left: 25px;
 }
 
-#meilleur_film h2{
+#best_movie h2{
     position: absolute;
     color: aliceblue;
     top: 40;
@@ -81,7 +81,7 @@ body{
 }
 
 
-/* Toutes les catégories */
+/* Every category */
 .categories h1{
     text-align: center;
     color: black;
@@ -91,7 +91,7 @@ body{
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
-    /* Cache la barre de défilement */
+    /* Hide the scrolling bar */
     overflow: hidden;
 }
 

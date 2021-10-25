@@ -3,46 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <title>JustStreamIt</title>
-        <meta name="description" content="Association proposant de visualiser en streaming des fims classés en temps réel en fonction de leur notes !">
+        <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+        
         <script src='scripts/carrousel.js' async></script>
+        <script src="scripts/main.js" async></script>
     </head>
     <body>
-        <div id="bloc_page">
-        <!-- En-tête de page avec titre + logo + menu de navigation -->
-            <nav class="barre_nav">
-                <div class="titre_nav">
+        <div id="page_bloc">
+        <!-- Main title, Logo + Navigation bar -->
+            <nav class="nav_bar">
+                <div class="nar_title">
                     <h1>JustStreamIt</h1>
                 </div>
                 <div class="logo">
                     <img src="image/logo-image-medium.png" alt="Logo JustStreamIt" width="265" height="138">
                 </div>
-                <div class="onglets">
-                    <a href="index.html" title="Accueil">Accueil</a>
-                    <a href="" title="Voir les catégories">Catégorie</a>
+                <div class="tabs">
+                    <a href="index.html" title="Home">Home</a>
+                    <a href="" title="Display categories">Categories</a>
                 </div>
             </nav>
 
-            <!-- Meilleur film -->
-            <main id="meilleur_film">
-                <h1>Meilleur film</h1>
+            <!-- Best movie -->
+            <main id="best_movie">
+                <h1>Best movie</h1>
                 <div class="best_movie_container">
-                <h2>Titre du film</h2>
-                <img class="movie_image" src="image/Webp.net-resizeimage.png" alt="">
-                <button>Lecture</button>
-                <p>Résumé du film</p>
+                <h2>Movie title</h2>
+                <img class="best_movie_image" src="image/Webp.net-resizeimage.png" alt="">
+                <button>Play</button>
+                <p>Description</p>
                 </div>
             </main>
 
-            <!--Films les mieux notés-->
+            <!-- Top rated category -->
             <div class="categories">
 
                 <div class="carrousel">
-                    <h1 class="titre_mieux_notes">Films les mieux notés</h1> 
+                    <h1 class="top_rated_title">Top rated movies</h1> 
                         <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
                             <
                         </button>
-                            <div class="liste">
+                            <div class="carrousel_container top-rated">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/m1.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/m2.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/m3.PNG" alt="">
@@ -50,19 +52,20 @@
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/m5.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/m6.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/o1.PNG" alt="">
+                                <!-- <img src="" alt=""> -->
                             </div>
                         <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
                             >
                         </button>
                 </div>
 
-                <!--Catégorie Anime-->
+                <!-- Anime category -->
                 <div class="carrousel">
-                    <h1 class="titre_anime">Anime</h1>
+                    <h1 class="anime_title">Animation</h1>
                         <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
                             <
                         </button>
-                            <div class="carrousel_container">
+                            <div class="carrousel_container anime">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/o2.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/o3.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/o4.PNG" alt="">
@@ -76,13 +79,13 @@
                         </button>
                 </div>
 
-                <!--Catégorie Horreur-->
+                <!--Horror category-->
                 <div class="carrousel">
                     <h1>Horreur</h1>
-                        <button class="carrousel_button carrousel_button-left button_horreur_left" aria-label="Previous slide">
+                        <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
                             <
                         </button>
-                            <div class="carrousel_container">
+                            <div class="carrousel_container horror">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p3.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p4.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p5.PNG" alt="">
@@ -91,18 +94,18 @@
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p8.PNG" alt="">
                                 <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p9.PNG" alt="">
                             </div>
-                        <button class="carrousel_button carrousel_button-right button_horreur_right" aria-label="Next slide">
+                        <button class="carrousel_button carrousel_button-right button_horror_right" aria-label="Next slide">
                         >
                         </button>
                 </div>
 
-                <!--Catégorie Séries-->
+                <!-- Musical category -->
                 <div class="carrousel">
-                    <h1>Séries</h1>
-                    <button class="carrousel_button carrousel_button-left button_series_left" aria-label="Previous slide">
+                    <h1>Musical</h1>
+                    <button class="carrousel_button carrousel_button-left button_musical_left" aria-label="Previous slide">
                         <
                     </button>
-                        <div class="carrousel_container">
+                        <div class="carrousel_container musical">
                             <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p10.PNG" alt="">
                             <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/p11.PNG" alt="">
                             <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/r1.PNG" alt="">
@@ -111,7 +114,27 @@
                             <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/r4.PNG" alt="">
                             <img class="carrousel_image" src="https://raw.githubusercontent.com/carlosavilae/Netflix-Clone/master/img/r5.PNG" alt="">
                         </div>
-                    <button class="carrousel_button carrousel_button-right button_series_right" aria-label="Next slide">
+                    <button class="carrousel_button carrousel_button-right button_musical_right" aria-label="Next slide">
+                        >
+                    </button>
+                </div>
+
+                <!-- Test category -->
+                <div class="carrousel">
+                    <h1>Test</h1>
+                    <button class="carrousel_button carrousel_button-left button_test_left" aria-label="Previous slide">
+                        <
+                    </button>
+                        <div class="carrousel_container test">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                            <img class="carrousel_image" src="" alt="">
+                        </div>
+                    <button class="carrousel_button carrousel_button-right button_test_right" aria-label="Next slide">
                         >
                     </button>
                 </div>

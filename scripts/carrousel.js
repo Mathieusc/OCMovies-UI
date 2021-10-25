@@ -1,59 +1,56 @@
-const slides = document.getElementsByClassName("carrousel_container");
-const images = document.getElementsByClassName("carrousel_image");
-console.log("Type of images: " + typeof(images));
-console.log(images);
-console.log("slides object:");
-console.log(slides);
+const topRatedImages = document.getElementsByClassName("carrousel_container top-rated").item(0).getElementsByTagName("img");
+const animeImages = document.getElementsByClassName("carrousel_container anime").item(0).getElementsByTagName("img");
+const horrorImages = document.getElementsByClassName("carrousel_container horror").item(0).getElementsByTagName("img");
+const musicalImages = document.getElementsByClassName("carrousel_container musical").item(0).getElementsByTagName("img");
 
+// Top rated movies slide
+document.querySelector(".button_best_left").addEventListener("click", movePreviousSlideTopRated);
+document.querySelector(".button_best_right").addEventListener("click", moveNextSlideTopRated);
 
-// Top rated movie slide
-document.querySelector(".button_best_left").addEventListener("click", movePreviousSlideMieuxNotes);
-document.querySelector(".button_best_right").addEventListener("click", moveNextSlideMieuxNotes);
-
-function movePreviousSlideMieuxNotes() {
-    images[6].parentNode.insertBefore(images[6], images[0]);
+function movePreviousSlideTopRated() {
+    topRatedImages[topRatedImages.length -1].parentNode.insertBefore(topRatedImages[topRatedImages.length -1], topRatedImages[0]);
 }
 
-function moveNextSlideMieuxNotes() {
-    images[0].parentNode.insertBefore(images[0], images[6]);
+function moveNextSlideTopRated() {
+    topRatedImages[0].parentNode.insertBefore(topRatedImages[0], topRatedImages[-1]);
 }
 
 
-// Anime movie slide
+// Anime slide
 document.querySelector(".button_anime_left").addEventListener("click", movePreviousSlideAnime);
 document.querySelector(".button_anime_right").addEventListener("click", moveNextSlideAnime);
 
 function movePreviousSlideAnime() {
-    images[13].parentNode.insertBefore(images[13], images[7]);
+    animeImages[animeImages.length -1].parentNode.insertBefore(animeImages[animeImages.length -1], animeImages[0]);
 }
 
 function moveNextSlideAnime() {
-    images[7].parentNode.insertBefore(images[7], images[13]);
+    animeImages[0].parentNode.insertBefore(animeImages[0], animeImages[-1]);
 }
 
 
-// Horror movie slide
-document.querySelector(".button_horreur_left").addEventListener("click", movePreviousSlideHorreur);
-document.querySelector(".button_horreur_right").addEventListener("click", moveNextSlideHorreur);
+// Horror movies slide
+document.querySelector(".button_horror_left").addEventListener("click", movePreviousSlideHorror);
+document.querySelector(".button_horror_right").addEventListener("click", moveNextSlideHorror);
 
-function movePreviousSlideHorreur() {
-    console.log("Previous slide");
-    images[20].parentNode.insertBefore(images[20], images[14]);
+function movePreviousSlideHorror() {
+    horrorImages[horrorImages.length -1].parentNode.insertBefore(horrorImages[horrorImages.length -1], horrorImages[0]);
 }
 
-function moveNextSlideHorreur() {
-    images[14].parentNode.insertBefore(images[14], images[20]);
+function moveNextSlideHorror() {
+    horrorImages[0].parentNode.insertBefore(horrorImages[0], horrorImages[-1]);
 }
 
 
-// Series slide
-document.querySelector(".button_series_left").addEventListener("click", movePreviousSlideSeries);
-document.querySelector(".button_series_right").addEventListener("click", moveNextSlideSeries);
+// Musical movies slide
+document.querySelector(".button_musical_left").addEventListener("click", movePreviousSlideMusical);
+document.querySelector(".button_musical_right").addEventListener("click", moveNextSlideMusical);
 
-function movePreviousSlideSeries() {
-    images[27].parentNode.insertBefore(images[27], images[21]);
+function movePreviousSlideMusical() {
+    musicalImages[musicalImages.length -1].parentNode.insertBefore(musicalImages[musicalImages.length -1], musicalImages[0]);
 }
 
-function moveNextSlideSeries() {
-    images[21].parentNode.insertBefore(images[21], images[27]);
+function moveNextSlideMusical() {
+    musicalImages[0].parentNode.insertBefore(musicalImages[0], musicalImages[-1]);
 }
+
