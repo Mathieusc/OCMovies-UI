@@ -8,7 +8,7 @@
 
 // console.log(movies);
 
-const topRatedMoviesApi = "http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=9.3&imdb_score_max=&title=&title_contains=&genre=&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=";
+const topRatedMoviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=9.3&page_size=100";
 
 let topRatedMoviesCarrousel = document.getElementsByClassName("carrousel_container top-rated").item(0).getElementsByTagName("img");
 
@@ -51,7 +51,7 @@ const fetchTopRatedMovies = async() => {
     topRatedMoviesImageUrl_1.shift();
     
     // Slice the second page urls since we only need 7 movies in total.
-    topRatedMoviesImageUrl_2 = topRatedMoviesImageUrl_2.slice(0, 3);
+    //topRatedMoviesImageUrl_2 = topRatedMoviesImageUrl_2.slice(0, 3);
     
     // Merge the urls from both pages into a single Array, created before the fetch call.
     topRatedMoviesUrl = [...topRatedMoviesImageUrl_1, ...topRatedMoviesImageUrl_2];

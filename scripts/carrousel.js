@@ -3,54 +3,36 @@ const animeImages = document.getElementsByClassName("carrousel_container anime")
 const horrorImages = document.getElementsByClassName("carrousel_container horror").item(0).getElementsByTagName("img");
 const musicalImages = document.getElementsByClassName("carrousel_container musical").item(0).getElementsByTagName("img");
 
+const mapImage = {
+                topRated: topRatedImages,
+                anime: animeImages,
+                horror: horrorImages,
+                musical: musicalImages};
+
+// Previous and next slider, each image will be replaced either on the last or the first position of the carrousel.
+const movePrevious = (imageType) => {
+    const imageList = mapImage[imageType];
+    imageList[imageList.length -1].parentNode.insertBefore(imageList[imageList.length -1], imageList[0]);
+}
+
+const moveNext = (imageType) => {
+    const imageList = mapImage[imageType];
+    imageList[0].parentNode.insertBefore(imageList[0], imageList[-1]);
+}
+
+
 // Top rated movies slide
-document.querySelector(".button_best_left").addEventListener("click", movePreviousSlideTopRated);
-document.querySelector(".button_best_right").addEventListener("click", moveNextSlideTopRated);
-
-function movePreviousSlideTopRated() {
-    topRatedImages[topRatedImages.length -1].parentNode.insertBefore(topRatedImages[topRatedImages.length -1], topRatedImages[0]);
-}
-
-function moveNextSlideTopRated() {
-    topRatedImages[0].parentNode.insertBefore(topRatedImages[0], topRatedImages[-1]);
-}
-
+document.querySelector(".button_best_left").addEventListener("click", () => movePrevious("topRated"));
+document.querySelector(".button_best_right").addEventListener("click", () => moveNext("topRated"));
 
 // Anime slide
-document.querySelector(".button_anime_left").addEventListener("click", movePreviousSlideAnime);
-document.querySelector(".button_anime_right").addEventListener("click", moveNextSlideAnime);
-
-function movePreviousSlideAnime() {
-    animeImages[animeImages.length -1].parentNode.insertBefore(animeImages[animeImages.length -1], animeImages[0]);
-}
-
-function moveNextSlideAnime() {
-    animeImages[0].parentNode.insertBefore(animeImages[0], animeImages[-1]);
-}
-
+document.querySelector(".button_anime_left").addEventListener("click", () => movePrevious("anime"));
+document.querySelector(".button_anime_right").addEventListener("click", () => moveNext("anime"));
 
 // Horror movies slide
-document.querySelector(".button_horror_left").addEventListener("click", movePreviousSlideHorror);
-document.querySelector(".button_horror_right").addEventListener("click", moveNextSlideHorror);
-
-function movePreviousSlideHorror() {
-    horrorImages[horrorImages.length -1].parentNode.insertBefore(horrorImages[horrorImages.length -1], horrorImages[0]);
-}
-
-function moveNextSlideHorror() {
-    horrorImages[0].parentNode.insertBefore(horrorImages[0], horrorImages[-1]);
-}
-
+document.querySelector(".button_horror_left").addEventListener("click", () => movePrevious("horror"));
+document.querySelector(".button_horror_right").addEventListener("click", () => moveNext("horror"));
 
 // Musical movies slide
-document.querySelector(".button_musical_left").addEventListener("click", movePreviousSlideMusical);
-document.querySelector(".button_musical_right").addEventListener("click", moveNextSlideMusical);
-
-function movePreviousSlideMusical() {
-    musicalImages[musicalImages.length -1].parentNode.insertBefore(musicalImages[musicalImages.length -1], musicalImages[0]);
-}
-
-function moveNextSlideMusical() {
-    musicalImages[0].parentNode.insertBefore(musicalImages[0], musicalImages[-1]);
-}
-
+document.querySelector(".button_musical_left").addEventListener("click", () => movePrevious("musical"));
+document.querySelector(".button_musical_right").addEventListener("click", () => moveNext("musical"));
