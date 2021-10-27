@@ -9,16 +9,18 @@ const mapImage = {
                 horror: horrorImages,
                 musical: musicalImages};
 
+                
 // Previous and next slider, each image will be replaced either on the last or the first position of the carrousel.
 const movePrevious = (imageType) => {
     const imageList = mapImage[imageType];
     imageList[imageList.length -1].parentNode.insertBefore(imageList[imageList.length -1], imageList[0]);
-}
+};
+
 
 const moveNext = (imageType) => {
     const imageList = mapImage[imageType];
     imageList[0].parentNode.insertBefore(imageList[0], imageList[-1]);
-}
+};
 
 
 // Top rated movies slide
