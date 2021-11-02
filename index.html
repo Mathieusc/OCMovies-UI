@@ -5,7 +5,10 @@
         <title>JustStreamIt</title>
         <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-        
+        <!-- Custom font used: Montserrat (undoublty the best best font world) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
         <script src='scripts/carrousel.js' async></script>
         <script src="scripts/main.js" async></script>
     </head>
@@ -13,28 +16,30 @@
         <div id="page_bloc">
         <!-- Main title, Logo + Navigation bar -->
             <nav class="nav_bar">
-                <div class="nar_title">
+                <div class="nav_title">
                     <h1>JustStreamIt</h1>
                 </div>
-                <div class="logo">
+                <div class="nav_logo">
                     <img src="image/logo-image-medium.png" alt="Logo JustStreamIt" width="265" height="138">
                 </div>
-                <div class="tabs">
+                <div class="nav_tabs">
                     <a href="index.html" title="Home">Home</a>
                     <a href="" title="Display categories">Categories</a>
                 </div>
             </nav>
 
             <!-- Best movie -->
-            <main id="best_movie">
-                <h1>Best movie</h1>
+            <h1 class="best_movie_title">Best movie</h1>
                 <div class="best_movie_container">
-                <h2>Movie title</h2>
-                <img class="best_movie_image" src="image/Webp.net-resizeimage.png" alt="">
-                <button>Play</button>
-                <p>Description</p>
+                    <div class="image_side">
+                        <img class="best_movie_image" src="https://m.media-amazon.com/images/M/MV5BNDEyYTA5OWEtYjNiYS00MGZlLThjYzEtMTc1Zjk2NDRmZmYxXkEyXkFqcGdeQXVyNzIwNTQyMw@@._V1_UY268_CR1,0,182,268_AL_.jpg" alt="">
+                    </div>
+                    <div class="best_movie_description">
+                        <h2>Movie title</h2>
+                        <p><span><strong>Description</strong></span><br>Provident, maxime soluta eveniet adipisci cumque quam beatae, dolorum, laboriosam odio deleniti amet. Illo, suscipit nemo assumenda laudantium perferendis neque perspiciatis nulla!</p>
+                        <button>Play</button>
+                    </div>
                 </div>
-            </main>
 
             <!-- Top rated category -->
             <div class="categories">
@@ -123,12 +128,12 @@
                         <div class="modal_header">
                             <span class="close_button">&times;</span>
                             <h2>Movie Title</h2>
-                            <p>Published: <span>Duration</span></p> 
+                            <p>Published : </p>
+                            <span>Duration :</span> 
                         </div>
                         <div class="modal_body">
-                            <img class="modal_image" src="">
-                            <p>Description</p>
-                            <p class="modal_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi libero totam sit, iste ut doloremque, perspiciatis ex ratione incidunt, corrupti id quo tempora consectetur esse reiciendis voluptatibus doloribus minus labore.</p>
+                            <img class="modal_image" src="https://m.media-amazon.com/images/M/MV5BNDEyYTA5OWEtYjNiYS00MGZlLThjYzEtMTc1Zjk2NDRmZmYxXkEyXkFqcGdeQXVyNzIwNTQyMw@@._V1_UY268_CR1,0,182,268_AL_.jpg">
+                            <p class="modal_description"><span>Description :</span><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, perferendis voluptates? Vitae perspiciatis nam voluptatem delectus sequi, illo praesentium consectetur ullam impedit dolore nulla quia, quis ad quos veritatis dolores?</p>
                         </div>
                         <div class="modal_footer">
                             <h3>Modal Footer</h3>

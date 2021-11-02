@@ -8,11 +8,14 @@
 body{
     /* background-color: dimgrey; */
     background-image: url("../image/wallpaper.png");
-    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: repeat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    height: 100vh;
+
 }
 
 #page_bloc{
-    width: 68%;
+    width: 80rem;
     margin: auto;
     padding-top: 20px;
     padding-bottom: 60px;
@@ -20,17 +23,40 @@ body{
 
 /* Navigation bar */
 
-.nav_bar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 25px;
+.nav_bar {
+    text-align: center;
 }
 
-.nav_bar .nav_title{
+.nav_bar > div{
+    max-width: auto;
+    max-height: auto;
+}
+
+.nav_title {
+    float: left;
+}
+
+.nav_logo {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.nav_tabs{
+    float: right;
+}
+
+.nav_tabs > a {
+    
+}
+
+/* .nav_title{
     color: black;
     display: flex;
-    align-items: center
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_title h1 {
 }
 
 .nav_bar .logo{
@@ -43,43 +69,43 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.nav_bar .tabs a{
-    /* Separate links without moving
-    the logo
-    (set top left/middle/top-right
-    to corresponding elements) */
-}
 
 /* Best movie */
 
-.best_movie_container {
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
-
-#best_movie h1{
+.best_movie_title{
     color: black;
     text-align: center;
-    margin-left: 25px;
+    justify-content: center;
 }
 
-#best_movie h2{
-    position: absolute;
-    color: aliceblue;
-    top: 40;
+.best_movie_container {
+    display: flex;
+    /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17); */
+    padding-left: 210px;
 }
 
-.best_movie_container img {
-    align-content: center;
+.best_movie_description {
+    align-items: center;
+    justify-content: center;
 }
 
-.best_movie_container button, p {
-    position: absolute;
+
+.best_movie_image {
+    max-width: 100%;
+    transition: 0.3s all ease-out;
+
 }
 
+.best_movie_image:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.best_movie_container > div {
+    flex-basis: 21rem;
+}
 
 /* Every category */
 .categories h1{
@@ -165,10 +191,10 @@ body{
     display: none;
     position: fixed;
     z-index: 1;
-    height: 100%;
-    width: 100%;
     left: 0;
     top: 0;
+    height: 100%;
+    width: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -176,24 +202,33 @@ body{
 .modal_content {
     background-color: #f4f4f4;
     margin: 10% auto;
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: auto;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration:0.8s;
 }
 
 .modal_header {
+    display: block;
     background: lavender;
     padding: 20px;
 }
 
-.modal_header h2,p{
-    margin: 20;
+.modal_header h2, .modal_footer h3{
+    margin: 0;
 }
 
 .modal_body {
+    display: flex;
+}
+
+.modal_content.modal_body {
     padding: 10px 20px;
+
+}
+
+.modal_image {
 }
 
 .modal.modal_content.modal_body.modal_description{
@@ -202,10 +237,20 @@ body{
     hyphens: auto;
 }
 
-.modal_description {
+.modal_content.modal_description {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+    height: auto;
+}
+
+.modal_footer {
+    background: lavender;
+    height: 50px;
+}
+
+.modal_footer h3 {
+    text-align: left;
 }
 
 .close_button {

@@ -20,10 +20,8 @@ let musicalMovies;
 
 // Modal elements:
 let modal = document.getElementsByClassName("modal")[0];
-console.log(modal);
 let closeButton = document.getElementsByClassName("close_button")[0];
-console.log(closeButton);
-
+modalTitle = modal.getElementsByTagName("h2")[0];
 
 // API request, get all image urls from the top rated movies inside a new Array:
 const fetchTopRatedMovies = async() => {
@@ -32,6 +30,8 @@ const fetchTopRatedMovies = async() => {
     
     // Get the best movie apart from the other.
     bestMovie = topRatedMovies.results[0];
+    // console.log("Best movie: ");
+    // console.log(bestMovie);
     
     // Map all image urls from the results inside a new Object:
     let topRatedMoviesImagesUrl = topRatedMovies.results.map(imageUrl => {
@@ -57,8 +57,8 @@ const fetchAnimeMovies = async() => {
     animeMovies = await fetch(animeMoviesApi)
     .then(response => response.json());
     
-    console.log(animeMovies);
-    
+
+    // Get all movie urls containing every details    
     let animeMoviesUrl = animeMovies.results.map(url => {
         return url.url;
     })
@@ -66,14 +66,15 @@ const fetchAnimeMovies = async() => {
     // =========================================================
     let animeMovieUrl = animeMoviesUrl.slice(0, 7);
     let animeMovieDetails;
-    console.log(animeMovieUrl);
+
     for (let i = 0; i < animeMovieUrl.length; i++) {
         animeMovieDetails = await fetch(animeMovieUrl[i])
         .then(response => response.json());
+        console.log("Anime movie details " + (i+1));
         console.log(animeMovieDetails);
     };
-    // =========================================================
-    console
+    // ==========================================================
+
     let animeMoviesImageUrl = animeMovies.results.map(imageUrl => {
         return imageUrl.image_url;
     });
@@ -82,13 +83,11 @@ const fetchAnimeMovies = async() => {
     
     for (let i = 0; i < animeMoviesCarrousel.length; i++) {
         animeMoviesCarrousel[i].src = animeMoviesImages[i];
-        console.log(animeMoviesCarrousel[i]);
-        animeMoviesCarrousel[i].addEventListener("click", openModal);
+        animeMoviesCarrousel[i].addEventListener("click", () => openModal(animeMovieDetails));
         closeButton.addEventListener("click", closeModal);
-
+        
     };
 };
-
 
 const fetchHorrorMovies = async() => {
     horrorMovies = await fetch(horrorMoviesApi)
@@ -131,8 +130,10 @@ fetchAnimeMovies();
 fetchHorrorMovies();
 fetchMusicalMovies();
 
-function openModal() {
+const openModal = (details) => {
     modal.style.display = "block";
+    console.log(details)
+    modalTitle.innerHTML = details.original_title;
 };
 
 function closeModal() {
