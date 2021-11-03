@@ -83,7 +83,9 @@ const fetchAnimeMovies = async() => {
     
     for (let i = 0; i < animeMoviesCarrousel.length; i++) {
         animeMoviesCarrousel[i].src = animeMoviesImages[i];
-        animeMoviesCarrousel[i].addEventListener("click", () => openModal(animeMovieDetails));
+        animeMoviesCarrousel[i].addEventListener("click", (element) => { 
+            console.log(element); openModal(animeMovieDetails)
+        });
         closeButton.addEventListener("click", closeModal);
         
     };
@@ -136,6 +138,6 @@ const openModal = (details) => {
     modalTitle.innerHTML = details.original_title;
 };
 
-function closeModal() {
+const closeModal = () => {
     modal.style.display = "none";
 }
