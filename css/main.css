@@ -7,7 +7,7 @@
 
 body{
     /* background-color: dimgrey; */
-    background-image: url("../image/wallpaper.png");
+    background-image: url("../image/wallpaper.jpg");
     background-repeat: repeat;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     height: 100vh;
@@ -128,7 +128,16 @@ body{
     margin: 0 auto;
 }
 
-.carrousel_image {
+.carrousel_container {
+    height: auto;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.carrousel_container > img {
     width: auto;
     height: auto;
     object-fit: cover;
@@ -138,17 +147,8 @@ body{
     margin-left: 1.5em;
 }
 
-.carrousel_image:hover{
+.carrousel_container > img:hover{
     transform: scale(0.9);
-}
-
-.carrousel_container {
-    height: auto;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 0;
-    margin: 0;
 }
 
 
