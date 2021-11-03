@@ -10,11 +10,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
         <script src='scripts/carrousel.js' async></script>
+        <script src="scripts/data.js" async></script>
         <script src="scripts/main.js" async></script>
     </head>
     <body>
         <div id="page_bloc">
-        <!-- Main title, Logo + Navigation bar -->
+            <!-- Main title, Logo + Navigation bar -->
             <nav class="nav_bar">
                 <div class="nav_title">
                     <h1>JustStreamIt</h1>
@@ -27,97 +28,68 @@
                     <a href="" title="Display categories">Categories</a>
                 </div>
             </nav>
-
+            
             <!-- Best movie -->
             <h1 class="best_movie_title">Best movie</h1>
-                <div class="best_movie_container">
-                    <div class="image_side">
-                        <img class="best_movie_image" src="https://m.media-amazon.com/images/M/MV5BNDEyYTA5OWEtYjNiYS00MGZlLThjYzEtMTc1Zjk2NDRmZmYxXkEyXkFqcGdeQXVyNzIwNTQyMw@@._V1_UY268_CR1,0,182,268_AL_.jpg" alt="">
-                    </div>
-                    <div class="best_movie_description">
-                        <h2>Movie title</h2>
-                        <p><span><strong>Description</strong></span><br>Provident, maxime soluta eveniet adipisci cumque quam beatae, dolorum, laboriosam odio deleniti amet. Illo, suscipit nemo assumenda laudantium perferendis neque perspiciatis nulla!</p>
-                        <button>Play</button>
-                    </div>
+            <div class="best_movie_container">
+                <div class="best_movie_image">
                 </div>
-
+                <div class="best_movie_description">
+                    <h2>Movie title</h2>
+                    <button>Play</button>
+                    <p><span><strong>Description</strong></span><br>Provident, maxime soluta eveniet adipisci cumque quam beatae, dolorum, laboriosam odio deleniti amet. Illo, suscipit nemo assumenda laudantium perferendis neque perspiciatis nulla!</p>
+                </div>
+            </div>
+            
             <!-- Top rated category -->
             <div class="categories">
-
+                
                 <div class="carrousel">
                     <h1 class="top_rated_title">Top rated movies</h1> 
-                        <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
-                            &lt;
-                        </button>
-                            <div class="carrousel_container top-rated">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                            </div>
-                        <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
-                            &gt;
-                        </button>
+                    <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
+                        &lt;
+                    </button>
+                    <div class="carrousel_container top-rated">
+                    </div>
+                    <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
+                        &gt;
+                    </button>
                 </div>
-
+                
                 <!-- Anime category -->
                 <div class="carrousel">
                     <h1 class="anime_title">Animation</h1>
-                        <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
-                            &lt;
-                        </button>
-                            <div class="carrousel_container anime">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                            </div>
-                        <button class="carrousel_button carrousel_button-right button_anime_right" aria-label="Next slide">
-                            &gt;
-                        </button>
+                    <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
+                        &lt;
+                    </button>
+                    <div class="carrousel_container anime">
+                    </div>
+                    <button class="carrousel_button carrousel_button-right button_anime_right" aria-label="Next slide">
+                        &gt;
+                    </button>
                 </div>
-
+                
                 <!--Horror category-->
                 <div class="carrousel">
                     <h1>Horror</h1>
-                        <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
-                            &lt;
-                        </button>
-                            <div class="carrousel_container horror">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                                <img class="carrousel_image" src="" alt="">
-                            </div>
-                        <button class="carrousel_button carrousel_button-right button_horror_right" aria-label="Next slide">
-                            &gt;
-                        </button>
+                    <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
+                        &lt;
+                    </button>
+                    <div class="carrousel_container horror">
+                    </div>
+                    <button class="carrousel_button carrousel_button-right button_horror_right" aria-label="Next slide">
+                        &gt;
+                    </button>
                 </div>
-
+                
                 <!-- Musical category -->
                 <div class="carrousel">
                     <h1>Musical</h1>
                     <button class="carrousel_button carrousel_button-left button_musical_left" aria-label="Previous slide">
                         &lt;
                     </button>
-                        <div class="carrousel_container musical">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                            <img class="carrousel_image" src="" alt="">
-                        </div>
+                    <div class="carrousel_container musical">
+                    </div>
                     <button class="carrousel_button carrousel_button-right button_musical_right" aria-label="Next slide">
                         &gt;
                     </button>
@@ -140,21 +112,21 @@
                         </div>
                     </div>
                 </div>
-
-                    <!-- <div class="carrousel_nav">
-                        <button class="carrousel_indicator current-slide"></button>
-                        <button class="carrousel_indicator"></button>
-                        <button class="carrousel_indicator"></button>
-                        <button class="carrousel_indicator"></button>
-                        <button class="carrousel_indicator"></button>
-                        <button class="carrousel_indicator"></button>
-                        <button class="carrousel_indicator"></button>
-                    </div> -->
-
-                </div>
+                
+                <!-- <div class="carrousel_nav">
+                    <button class="carrousel_indicator current-slide"></button>
+                    <button class="carrousel_indicator"></button>
+                    <button class="carrousel_indicator"></button>
+                    <button class="carrousel_indicator"></button>
+                    <button class="carrousel_indicator"></button>
+                    <button class="carrousel_indicator"></button>
+                    <button class="carrousel_indicator"></button>
+                </div> -->
+                
             </div>
         </div>
-        
-    </body>
+    </div>
+    
+</body>
 
 </html>

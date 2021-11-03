@@ -1,143 +1,73 @@
-
-// Api urls + elements
-const topRatedMoviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=9.3&page_size=100&sort_by=-imdb_score";
-let topRatedMoviesCarrousel = document.getElementsByClassName("carrousel_container top-rated").item(0).getElementsByTagName("img");
-let topRatedMovies;
-let bestMovieImage = document.getElementsByClassName("best_movie_image").item(0);
-let bestMovie;
-
-const animeMoviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.5&page_size=100&sort_by=-imdb_score&genre=Animation";
-let animeMoviesCarrousel = document.getElementsByClassName("carrousel_container anime").item(0).getElementsByTagName("img");
-let animeMovies;
-
-const horrorMoviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.4&page_size=100&sort_by=-imdb_score&genre=Horror";
-let horrorMoviesCarrousel = document.getElementsByClassName("carrousel_container horror").item(0).getElementsByTagName("img");
-let horrorMovies;
-
-const musicalMoviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.6&page_size=100&sort_by=-imdb_score&genre=Musical";
-let musicalMoviesCarrousel = document.getElementsByClassName("carrousel_container musical").item(0).getElementsByTagName("img");
-let musicalMovies;
-
-// Modal elements:
-let modal = document.getElementsByClassName("modal")[0];
-let closeButton = document.getElementsByClassName("close_button")[0];
-modalTitle = modal.getElementsByTagName("h2")[0];
-
-// API request, get all image urls from the top rated movies inside a new Array:
-const fetchTopRatedMovies = async() => {
-    topRatedMovies = await fetch(topRatedMoviesApi)
+const fetchBestMovie = async (movie) => {
+    //bestMovieUrl = movies["details"].results[0].url;
+    movie["details"] = await fetch(movie["url"])
     .then(response => response.json());
+    console.log(movie["details"]);
+
+    let bestImage = document.createElement("img");
+    bestImage = document.createElement("img");
+    bestImage.src = movie["details"].results[0].image_url;
+    bestImage.id = movie["details"].results[0].id;
+    console.log("Best movie image id ???");
+    console.log(bestImage.id);
+    movie["image"].appendChild(bestImage);
+    bestImage.addEventListener("click", () => openModal(bestImage.id));
+    closeButton.addEventListener("click", closeModal);
+    movie["title"][0].innerHTML = movie["details"].results[0].title;
+    //movie["description"][0].innerHTML = movie["details"].results[0].description;
+    updateBestMovieDescription(bestImage.id);
+    //movie["title"][0].innerText = "ZEZJAOEJAZEJAZPO";
     
-    // Get the best movie apart from the other.
-    bestMovie = topRatedMovies.results[0];
-    // console.log("Best movie: ");
-    // console.log(bestMovie);
+};
+
+
+const fetchMovies = async (movies) => {
+    movies["details"] = await fetch(movies["url"])
+    .then(response => response.json());
+    console.log(movies["details"]);
     
-    // Map all image urls from the results inside a new Object:
-    let topRatedMoviesImagesUrl = topRatedMovies.results.map(imageUrl => {
-        return imageUrl.image_url;
-    });
+    if (movies == topRatedMovies) {
+        movies["details"].results.shift();
+    };
     
-    // Remove the first movie since it is the best one. The best movie is displayed on it's own.
-    topRatedMoviesImagesUrl.shift();
-    
-    // Slice the urls since we only need 7 movies in total.
-    let topRatedMoviesImages = topRatedMoviesImagesUrl.slice(0, 7);
-    
-    // Insert pictures into the carrousel for the corresponding category.
-    for (let i = 0; i < topRatedMoviesCarrousel.length; i++) {
-        topRatedMoviesCarrousel[i].src = topRatedMoviesImages[i];
-        topRatedMoviesCarrousel[i].addEventListener("click", openModal);
+    for (let i = 0; i < 7; i ++) {
+        let newImage = document.createElement("img");
+        newImage = document.createElement("img");
+        newImage.src = movies["details"].results[i].image_url;
+        newImage.id = movies["details"].results[i].id;
+        movies["carrousel"].appendChild(newImage);
+        newImage.addEventListener("click", () => openModal(newImage.id));
         closeButton.addEventListener("click", closeModal);
     };
 };
 
 
-const fetchAnimeMovies = async() => {
-    animeMovies = await fetch(animeMoviesApi)
+const openModal = async (id) => {
+    let movieDetails;
+    movieDetails = await fetch("http://localhost:8000/api/v1/titles/" + id)
     .then(response => response.json());
-    
-
-    // Get all movie urls containing every details    
-    let animeMoviesUrl = animeMovies.results.map(url => {
-        return url.url;
-    })
-    
-    // =========================================================
-    let animeMovieUrl = animeMoviesUrl.slice(0, 7);
-    let animeMovieDetails;
-
-    for (let i = 0; i < animeMovieUrl.length; i++) {
-        animeMovieDetails = await fetch(animeMovieUrl[i])
-        .then(response => response.json());
-        console.log("Anime movie details " + (i+1));
-        console.log(animeMovieDetails);
-    };
-    // ==========================================================
-
-    let animeMoviesImageUrl = animeMovies.results.map(imageUrl => {
-        return imageUrl.image_url;
-    });
-    
-    let animeMoviesImages = animeMoviesImageUrl.slice(0, 7);
-    
-    for (let i = 0; i < animeMoviesCarrousel.length; i++) {
-        animeMoviesCarrousel[i].src = animeMoviesImages[i];
-        animeMoviesCarrousel[i].addEventListener("click", (element) => { 
-            console.log(element); openModal(animeMovieDetails)
-        });
-        closeButton.addEventListener("click", closeModal);
-        
-    };
-};
-
-const fetchHorrorMovies = async() => {
-    horrorMovies = await fetch(horrorMoviesApi)
-    .then(response => response.json());
-    
-    let horrorMoviesImagesUrl = horrorMovies.results.map(imageUrl => {
-        return imageUrl.image_url;
-    });
-    
-    let horrorMoviesImages = horrorMoviesImagesUrl.slice(0, 7);
-    
-    for (let i=0; i<horrorMoviesCarrousel.length; i++) {
-        horrorMoviesCarrousel[i].src = horrorMoviesImages[i];
-        horrorMoviesCarrousel[i].addEventListener("click", openModal);
-        closeButton.addEventListener("click", closeModal);
-    };
-};
-
-
-const fetchMusicalMovies = async() => {
-    musicalMovies = await fetch(musicalMoviesApi)
-    .then(response => response.json());
-    
-    let musicalMoviesImagesUrl = musicalMovies.results.map(imageUrl => {
-        return imageUrl.image_url;
-    });
-    
-    let musicalMoviesImages = musicalMoviesImagesUrl.slice(0, 7);
-    
-    for (let i = 0; i < musicalMoviesCarrousel.length; i ++) {
-        musicalMoviesCarrousel[i].src = musicalMoviesImagesUrl[i];
-        musicalMoviesCarrousel[i].addEventListener("click", openModal);
-        closeButton.addEventListener("click", closeModal);
-    };
-};
-
-
-fetchTopRatedMovies();
-fetchAnimeMovies();
-fetchHorrorMovies();
-fetchMusicalMovies();
-
-const openModal = (details) => {
+    console.log(movieDetails);
     modal.style.display = "block";
-    console.log(details)
-    modalTitle.innerHTML = details.original_title;
+    console.log(id)
+    modalTitle.innerHTML = movieDetails.original_title;
 };
+
 
 const closeModal = () => {
     modal.style.display = "none";
+};
+
+
+const updateBestMovieDescription = async (id) => {
+    let movieDetail = await fetch("http://localhost:8000/api/v1/titles/" + id)
+    .then(response => response.json());
+    console.log("A LAIDE");
+    console.log(movieDetail);
+    bestMovie["description"][0].innerHTML = movieDetail.description;
 }
+
+fetchMovies(topRatedMovies);
+fetchBestMovie(bestMovie);
+fetchMovies(animeMovies);
+fetchMovies(horrorMovies);
+fetchMovies(musicalMovies);
