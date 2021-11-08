@@ -2,6 +2,7 @@
 let modal = document.getElementsByClassName("modal")[0];
 let closeButton = document.getElementsByClassName("close_button")[0];
 modalTitle = modal.getElementsByTagName("h2")[0];
+
 modalDescription = modal.getElementsByClassName("modal_description")[0];
 modalImage = modal.getElementsByClassName("modal_body").item(0).getElementsByTagName("img")[0];
 modalDate = modal.getElementsByClassName("modal_header").item(0).getElementsByTagName("p")[0];
@@ -12,6 +13,7 @@ modalDirectors = modal.getElementsByClassName("modal_footer").item(0).getElement
 modalActors = modal.getElementsByClassName("modal_footer").item(0).getElementsByTagName("p")[3];
 modalCountries = modal.getElementsByClassName("modal_footer").item(0).getElementsByTagName("p")[4];
 modalBoxOffice = modal.getElementsByClassName("modal_footer").item(0).getElementsByTagName("p")[5];
+
 
 
 const moviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.3&page_size=100&sort_by=-imdb_score";
@@ -67,7 +69,6 @@ const horrorMovies = {
     details: horrorMoviesDetails
 }
 
-/* SALUT */
 let musicalMoviesCarrousel = document.getElementsByClassName("carrousel_container musical").item(0);
 let musicalMoviesImages;
 let musicalMoviesDetails;
@@ -78,3 +79,4 @@ const musicalMovies = {
     images: musicalMoviesImages,
     details: musicalMoviesDetails
 }
+

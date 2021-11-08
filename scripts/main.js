@@ -1,7 +1,7 @@
 const fetchBestMovie = async (movie) => {
+
     movie["details"] = await fetch(movie["url"])
     .then(response => response.json());
-
     let bestImage = document.createElement("img");
     bestImage.src = movie["details"].results[0].image_url;
     bestImage.id = movie["details"].results[0].id;
@@ -32,6 +32,7 @@ const fetchMovies = async (movies) => {
         newImage.addEventListener("click", () => openModal(newImage.id));
         closeButton.addEventListener("click", closeModal);
     };
+
 };
 
 
@@ -58,6 +59,7 @@ const openModal = async (id) => {
     modalActors.innerHTML = movieDetails.genres;
     modalCountries.innerHTML = movieDetails.countries;
     modalBoxOffice.innerHTML = "Gross income : " + new Intl.NumberFormat("en-us", { style: "currency", currency: "USD" }).format(movieDetails.worldwide_gross_income);
+
 };
 
 const displayDuration = (minutes) => {
@@ -66,6 +68,7 @@ const displayDuration = (minutes) => {
     // let seconds = Math.floor(minute / 3600);
     return hours + "h" + minute + "m";
 }
+
 
 const closeModal = () => {
     modal.style.display = "none";
