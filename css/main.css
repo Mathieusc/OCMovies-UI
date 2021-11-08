@@ -11,6 +11,7 @@ body{
     background-repeat: repeat;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     height: 100vh;
+    color: black;
 
 }
 
@@ -91,14 +92,50 @@ body{
     justify-content: center;
 }
 
+.best_movie_description button {
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
 
-.best_movie_image {
+.best_movie_description button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .best_movie_description button span:after {
+    content: '\25BA';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .best_movie_description button:hover span {
+    padding-right: 25px;
+  }
+  
+  .best_movie_description button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.best_movie_image img{
     max-width: 100%;
     transition: 0.3s all ease-out;
 
 }
 
-.best_movie_image:hover{
+.best_movie_image img:hover{
     transform: scale(0.9);
     cursor: pointer;
 }
@@ -162,12 +199,12 @@ body{
     display: flex;
     position: absolute;
     justify-content: space-between;
-    top: 50%;
+    top: 45%;
     /* transform: translateY(-50%); */
     background: transparent;
     border: 0;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 70px;
     color: black;
     transition: 0.3s all ease-out;
 }
@@ -177,11 +214,11 @@ body{
 }
 
 .carrousel_button-left {
-    left: -30px;
+    left: -35px;
 }
 
 .carrousel_button-right {
-    right: -30px;
+    right: -35px;
 }
 
 
@@ -223,12 +260,23 @@ body{
     display: flex;
 }
 
+.modal_body >  {
+    display: block;
+}
+
 .modal_content.modal_body {
     padding: 10px 20px;
 
 }
 
 .modal_image {
+    padding: 20px;
+}
+
+.modal_description {
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 14px;
 }
 
 .modal.modal_content.modal_body.modal_description{
@@ -242,15 +290,30 @@ body{
     word-wrap: break-word;
     hyphens: auto;
     height: auto;
+    justify-content: right;
+
 }
 
 .modal_footer {
-    background: lavender;
-    height: 50px;
+    background: lavender;;
+    display: grid;
+    height: 100px;
+    grid-template-columns: 200px 200px 200px;
+    grid-row: auto;
+    grid-column-gap: 80px;
+    grid-row-gap: 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal_footer h3 {
-    text-align: left;
+.modal_footer p {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
 }
 
 .close_button {
