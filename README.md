@@ -1,7 +1,7 @@
 # Openclassrooms Project 6
 ## Develop a user interface for a Python web application
 
-#Just Streamt It
+# Just Streamt It
 
 Display movies in real time sorted by their imdb scores.
 Movies categories:
@@ -12,11 +12,10 @@ Movies categories:
 
 ### Installing
 
-Follow the installation instructions from :
+Follow the installation instructions :
 
-```
 * [OpenClassrooms repository](https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR#readme)
-```
+
 
 ## Using the website
 
