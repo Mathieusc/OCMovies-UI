@@ -10,7 +10,7 @@ Movies categories:
 - Horror
 - Musical
 
-### Installing
+## Installing
 
 Follow the installation instructions :
 
