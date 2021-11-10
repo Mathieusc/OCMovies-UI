@@ -5,7 +5,7 @@ Develop a user interface for a Python web application
 
 Display movies in real time sorted by their imdb scores.
 
-Movies categories:
+Movies categories :
 - Top Rated
 - Animation
 - Horror
