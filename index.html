@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <title>JustStreamIt</title>
         <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-        <!-- Custom font used: Montserrat (undoublty the best best font world) -->
+        <!-- Custom font used: Montserrat -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
-        <script src='scripts/carrousel.js' async></script>
-        <script src="scripts/data.js" async></script>
-        <script src="scripts/main.js" async></script>
     </head>
+
     <body>
         <div id="page_bloc">
             <!-- Main title, Logo + Navigation bar -->
@@ -20,15 +19,11 @@
                 <div class="nav_title">
                     <h1>JustStreamIt</h1>
                 </div>
-                <div class="nav_logo">
-                    <img src="image/logo-image-medium.png" alt="Logo JustStreamIt" width="265" height="138">
-                </div>
-                <div class="nav_tabs">
-                    <a href="index.html" title="Home">Home</a>
-                    <!-- Ok I need to fix that -->
-                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                    <a href="" title="Display categories">Categories</a>
-                </div>
+                <br>
+                    <ul class="nav_tabs">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                    </ul>
             </nav>
             
             <!-- Best movie -->
@@ -40,6 +35,8 @@
                     <h2>Movie title</h2>
                     <button><span>Play</span></button>
                     <p>Provident, maxime soluta eveniet adipisci cumque quam beatae, dolorum, laboriosam odio deleniti amet. Illo, suscipit nemo assumenda laudantium perferendis neque perspiciatis nulla!</p>
+                </div>
+            </div>
 
                 </div>
             </div>
@@ -51,13 +48,11 @@
                     <h1 class="top_rated_title">Top rated movies</h1> 
                     <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
                         &lsaquo;
-
                     </button>
                     <div class="carrousel_container top-rated">
                     </div>
                     <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
                         &rsaquo;
-
                     </button>
                 </div>
                 
@@ -66,13 +61,11 @@
                     <h1 class="anime_title">Animation</h1>
                     <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
                         &lsaquo;
-
                     </button>
                     <div class="carrousel_container anime">
                     </div>
                     <button class="carrousel_button carrousel_button-right button_anime_right" aria-label="Next slide">
                         &rsaquo;
-
                     </button>
                 </div>
                 
@@ -81,13 +74,11 @@
                     <h1>Horror</h1>
                     <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
                         &lsaquo;
-
                     </button>
                     <div class="carrousel_container horror">
                     </div>
                     <button class="carrousel_button carrousel_button-right button_horror_right" aria-label="Next slide">
                         &rsaquo;
-
                     </button>
                 </div>
                 
@@ -104,6 +95,7 @@
                     </button>
                 </div>
                 
+                <!-- Modal -->
                 <div class="modal">
                     <div class="modal_content">
                         <div class="modal_header">
@@ -126,11 +118,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     
+    <!-- JavaScript -->
+    <script src='scripts/carrousel.js'></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+
 </body>
 
 </html>

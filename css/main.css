@@ -1,99 +1,80 @@
-/* Personalize fonts (fontsquirrel/awesomefont/googlefont) */
-
 /* Main page elements */
 *{
     box-sizing: border-box;
 }
 
-body{
-    /* background-color: dimgrey; */
+body {
     background-image: url("../image/wallpaper.jpg");
-    background-repeat: repeat;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     height: 100vh;
     color: black;
 
 }
 
-#page_bloc{
+#page_bloc {
     width: 80rem;
     margin: auto;
     padding-top: 20px;
     padding-bottom: 60px;
 }
 
+
 /* Navigation bar */
 
 .nav_bar {
+    background: url("../image/logo-image-medium.png") no-repeat;
+    background-position: center center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    align-items: center;
+    padding: 50px 71px;
 }
 
-.nav_bar > div{
-    max-width: auto;
-    max-height: auto;
+.nav_tabs {
+    list-style: none;
 }
 
-.nav_title {
-    float: left;
-}
-
-.nav_logo {
+.nav_tabs li {
     display: inline-block;
-    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 20px;
 }
 
-.nav_tabs{
-    float: right;
-}
-
-.nav_tabs > a {
-    
-}
-
-/* .nav_title{
+.nav_tabs li a {
     color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
 }
-
-.nav_title h1 {
-}
-
-.nav_bar .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav_bar .tabs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 
 /* Best movie */
 
-.best_movie_title{
+.best_movie_title {
+    margin-left: -10px;
+    margin-top: 20px;
     color: black;
     text-align: center;
     justify-content: center;
 }
 
 .best_movie_container {
+    margin-top: -20px;
     display: flex;
-    /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17); */
-    padding-left: 210px;
+    max-width: 71%;
+    margin-left: 210px;
 }
 
 .best_movie_description {
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
 }
 
 .best_movie_description button {
-    background-color: #555555; /* Green */
+    background-color: darkslateblue;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -102,10 +83,10 @@ body{
     display: inline-block;
     font-size: 16px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .best_movie_description button span {
-    cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
@@ -129,36 +110,38 @@ body{
     right: 0;
   }
 
-.best_movie_image img{
+.best_movie_image img {
     max-width: 100%;
     transition: 0.3s all ease-out;
 
 }
 
-.best_movie_image img:hover{
+.best_movie_image img:hover {
     transform: scale(0.9);
-    cursor: pointer;
 }
 
 .best_movie_container > div {
     flex-basis: 21rem;
 }
 
+
 /* Every category */
-.categories h1{
+
+.categories h1 {
     text-align: center;
     color: black;
 }
 
-.categories .liste{
+.categories .liste {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
-    /* Hide the scrolling bar */
     overflow: hidden;
 }
 
+
 /* Carrousel */
+
 .carrousel {
     position: relative;
     max-width: 71%;
@@ -171,7 +154,8 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     padding: 0;
-    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .carrousel_container > img {
@@ -184,10 +168,9 @@ body{
     margin-left: 1.5em;
 }
 
-.carrousel_container > img:hover{
+.carrousel_container > img:hover {
     transform: scale(0.9);
 }
-
 
 .carrousel_slide {
     display: flex;
@@ -195,12 +178,11 @@ body{
     bottom: 0;
 }
 
-.carrousel_button{
+.carrousel_button {
     display: flex;
     position: absolute;
     justify-content: space-between;
     top: 45%;
-    /* transform: translateY(-50%); */
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -209,7 +191,7 @@ body{
     transition: 0.3s all ease-out;
 }
 
-.carrousel_button:hover{
+.carrousel_button:hover {
     transform: scale(1.2);
 }
 
@@ -239,7 +221,7 @@ body{
 .modal_content {
     background-color: #f4f4f4;
     margin: 10% auto;
-    width: 60%;
+    width: 55%;
     height: auto;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
@@ -252,7 +234,7 @@ body{
     padding: 20px;
 }
 
-.modal_header h2, .modal_footer h3{
+.modal_header h2, .modal_footer h3 {
     margin: 0;
 }
 
@@ -279,7 +261,7 @@ body{
     font-size: 14px;
 }
 
-.modal.modal_content.modal_body.modal_description{
+.modal.modal_content.modal_body.modal_description {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
@@ -322,7 +304,7 @@ body{
     font-size: 50px;
 }
 
-.close_button:hover,.close_button:focus{
+.close_button:hover,.close_button:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
