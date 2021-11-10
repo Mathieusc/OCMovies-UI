@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <title>JustStreamIt</title>
         <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-        <!-- Custom font used: Montserrat (undoublty the best best font world) -->
+        <!-- Custom font used: Montserrat -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
-        <script src='scripts/carrousel.js' async></script>
-        <script src="scripts/data.js" async></script>
-        <script src="scripts/main.js" async></script>
     </head>
+
     <body>
         <div id="page_bloc">
             <!-- Main title, Logo + Navigation bar -->
@@ -20,17 +19,13 @@
                 <div class="nav_title">
                     <h1>JustStreamIt</h1>
                 </div>
-                <div class="nav_logo">
-                    <img src="image/logo-image-medium.png" alt="Logo JustStreamIt" width="265" height="138">
-                </div>
-                <div class="nav_tabs">
-                    <a href="index.html" title="Home">Home</a>
-                    <!-- Ok I need to fix that -->
-                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                    <a href="" title="Display categories">Categories</a>
-                </div>
+                <br>
+                    <ul class="nav_tabs">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                    </ul>
             </nav>
-            
+
             <!-- Best movie -->
             <h1 class="best_movie_title">Best movie</h1>
             <div class="best_movie_container">
@@ -42,7 +37,7 @@
                     <p>Provident, maxime soluta eveniet adipisci cumque quam beatae, dolorum, laboriosam odio deleniti amet. Illo, suscipit nemo assumenda laudantium perferendis neque perspiciatis nulla!</p>
                 </div>
             </div>
-            
+
             <!-- Top rated category -->
             <div class="categories">
                 
@@ -97,6 +92,7 @@
                     </button>
                 </div>
                 
+                <!-- Modal -->
                 <div class="modal">
                     <div class="modal_content">
                         <div class="modal_header">
@@ -123,6 +119,11 @@
         </div>
     </div>
     
+    <!-- JavaScript -->
+    <script src='scripts/carrousel.js'></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
