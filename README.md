@@ -20,7 +20,7 @@ Follow the installation instructions :
 
 ## Using the website
 
-Open the index.html file inside your favorite browser.
+Open the index.html file with your favorite browser.
 
 
 ## Built with
