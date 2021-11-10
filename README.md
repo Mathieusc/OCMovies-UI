@@ -1,5 +1,5 @@
 # Openclassrooms Project 6
-Develop a user interface for a Python web application
+Develop a user interface for a Python web application.
 
 ## Just Streamt It
 
