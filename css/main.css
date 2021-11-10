@@ -144,7 +144,7 @@ body {
 
 .carrousel {
     position: relative;
-    max-width: 71%;
+    width: 71%;
     margin: 0 auto;
 }
 
