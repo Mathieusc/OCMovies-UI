@@ -19,7 +19,6 @@ const fetchBestMovie = async (movie) => {
     movie["title"][0].innerHTML = movie["details"].results[0].title;
 
     updateBestMovieDescription(bestImage.id);
-
 };
 
 const updateBestMovieDescription = async (id) => {
@@ -88,12 +87,13 @@ const displayDuration = (minutes) => {
     let hours = Math.floor(minutes / 60);
     let minute = minutes % 60;
     return `${hours}${"h"}${minute}${"m"}`;
+
 };
+
 
 const closeModal = () => {
     modal.style.display = "none";
 };
-
 
 fetchBestMovie(bestMovie);
 fetchMovies(topRatedMovies);

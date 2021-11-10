@@ -242,6 +242,10 @@ body {
     display: flex;
 }
 
+.modal_body >  {
+    display: block;
+}
+
 .modal_content.modal_body {
     padding: 10px 20px;
 

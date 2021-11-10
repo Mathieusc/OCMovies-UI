@@ -48,3 +48,4 @@ let musicalMovies = {
     url: `${moviesApi} + ${"&genre=Musical"}`,
     carrousel: document.getElementsByClassName("carrousel_container musical").item(0)
 };
+
