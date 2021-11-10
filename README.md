@@ -15,7 +15,7 @@ Movies categories:
 Follow the installation instructions from the OpenClassrooms repository :
 
 ```
-https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR#readme
+* (https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR#readme)
 ```
 
 ## Using the website
