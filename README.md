@@ -4,6 +4,7 @@ Develop a user interface for a Python web application
 ## Just Streamt It
 
 Display movies in real time sorted by their imdb scores.
+
 Movies categories:
 - Top Rated
 - Animation
