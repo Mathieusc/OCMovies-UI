@@ -2,7 +2,7 @@
 Develop a user interface for a Python web application.
 
 ## Just Streamt It
-
+![Just Sreamt It](https://user.oc-static.com/upload/2020/09/22/1600779540759_Online%20bookstore-01.png)  
 Display movies in real time sorted by their imdb scores.
 
 Movies categories :
