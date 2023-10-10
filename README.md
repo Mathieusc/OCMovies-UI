@@ -60,7 +60,7 @@ python manage.py runserver
 ```
 ## Using the local website
 
-Open the index.html file with your favorite browser.
+Open the OCMovies-UI/index.html file with your favorite browser.
 
 
 ## Front-end built with
