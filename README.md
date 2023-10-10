@@ -30,21 +30,19 @@ git clone https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.gi
 ```
 cd OCMovies-API-EN-FR
 ```
-5. Create a virtual environment for the project:  
-Windows:
+5. Create a virtual environment for the project on Windows:
 ```
 py -m venv env
 ```
-Linux/Mac:
+On Linux/Mac:
 ```
 python3 -m venv env
 ```
-6. Activate the virtual environment:
-Windows:
+6. Activate the virtual environment on Windows:
 ```
 env\Scripts\activate
 ```
-Linux/Mac:
+On Linux/Mac:
 ```
 source env/bin/activate
 ```
