@@ -14,6 +14,8 @@ Movies categories :
 
 ## Installing
 
+[Download Python](https://www.python.org/downloads/)
+
 1. Clone my repository or download it [here](https://github.com/Mathieusc/OCMovies-UI/archive/refs/heads/main.zip) as a zip file.
 ```
 git clone https://github.com/Mathieusc/OCMovies-UI.git
